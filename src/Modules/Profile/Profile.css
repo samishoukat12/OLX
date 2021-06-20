@@ -1,0 +1,51 @@
+.ProfileContainer{
+    margin-top: 50px;
+    background-color:cornsilk;
+    border:1px solid black;
+}
+.ProfileImg{
+    display:"block";
+    width:200px;
+    height:200px;
+    border-radius: 50% !important;
+    margin-top: 30px;
+}
+.EditButton{
+    display: block;
+    border-radius: 50% !important;
+    height: 60px !important;
+    width: 30px !important;
+    background-color: #002f34 !important;
+    color:#ffffff !important;
+
+}
+.ProfileName{
+    font-size: 16.4px !important;
+    font-weight: 600 !important;
+    margin-top: 30px !important;
+}
+.ProfileName1{
+    font-size: 16.4px !important;
+    font-weight: 600 !important;
+}
+div.EditButton{
+    z-index: 1;
+    height: 1.8rem;
+    font-size: 12px;
+    width: 3.59rem;
+    font-weight:500;
+    /* border-radius: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    padding-left: 3px;
+    padding-right: 3px;
+    background-color: #FFcE32;
+    position: absolute;
+    bottom:    11%;
+    right:  29%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
+}

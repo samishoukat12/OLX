@@ -1,0 +1,33 @@
+.logo {
+  margin-bottom: -4px;
+  height: 40px;
+  width: 50px;
+}
+.link {
+  color: white !important;
+  padding-left: 40px;
+}
+.LogIn {
+  color: #002f34;
+  font-weight: bold;
+  font-size: 17.5px;
+  /* float: right; */
+  /* padding-right:30px; */
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  text-decoration: underline !important;
+}
+.LogIn:hover {
+  text-decoration: none !important;
+  color: #002f34;
+}
+.ProFile{
+  
+  color:#002f34 !important; 
+}
+.ProFile:hover{
+  text-decoration: none !important;
+  color: #002f34;
+}

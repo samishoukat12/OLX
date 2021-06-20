@@ -1,0 +1,13 @@
+.linkDropDown{
+    color:#393f34;
+    font-weight: 800;
+
+}
+.LinkColor{
+    color: #393f34 !important;
+    font-size: 14.3px;
+
+}
+.LinkColor:hover{
+    color:#21A49f !important;
+}
