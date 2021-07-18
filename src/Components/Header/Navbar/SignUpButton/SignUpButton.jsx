@@ -3,7 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Modal from "@material-ui/core/Modal";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
-import Link from "@material-ui/core/Link";
+// import Link from "@material-ui/core/Link";
+import {Link} from "react-router-dom"
 import "./SignUpButton.css";
 import img from "../../../../Assets/imgs/img.jpg";
 import Button from "@material-ui/core/Button";
@@ -43,10 +44,15 @@ export default function SignUpModal() {
 
   return (
     <div>
-      <Button className="SignUpButton" onClick={handleOpen}>
+    
+     <Button className="SellButton" >
+     <Link  to="/SellingForm" className="SellLink" >
         <AddIcon/> Sell
+        </Link>
       </Button>
-      <Modal
+     
+    
+      {/* <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         className={classes.modal}
@@ -86,7 +92,7 @@ export default function SignUpModal() {
             </center>
           </div>
         </Fade>
-      </Modal>
+      </Modal> */}
     </div>
   );
 }

@@ -17,7 +17,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
-import logo from "../../../../Assets/Logo/OLX.png";
+import logo from "../../../../Assets/Logo/OLX.svg";
 import "./Drawer.css";
 import Grid from "@material-ui/core/Grid";
 import Grouped from "./NvbarGroupSearcg";
@@ -27,13 +27,13 @@ import SignUpModal from "../SignUpButton/SignUpButton"
 // ReactBootstrap
 import InputGroup from "react-bootstrap/InputGroup"
 import FormControl from "react-bootstrap/FormControl"
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import {Link} from "react-router-dom"
 import { useSelector } from "react-redux";
 import { useDispatch } from 'react-redux'
 import { doLogout } from '../../../../Redux/Actions/Actions'
 import {useEffect} from "react"
 import { alreadyLoginUser } from "../../../../Redux/Actions/Actions";
+import SimplePopover from "../../../UserLoginOnButton/ButtonOnLogin";
 const drawerWidth = 300;
 
 const useStyles = makeStyles((theme) => ({
@@ -214,7 +214,7 @@ function MenuDrawer(props) {
                 {/* <LoginModal /> */}
                 {
                   authState?
-                  (  <div  className="LogIn"><Link className="ProFile" to="/profile"><AccountCircleIcon  fontSize="large"/></Link></div> )
+                  (  <div  className="LogIn"><SimplePopover/></div> )
                   :
                   ( <div  className="LogIn"> <Link to="/Login" className="LogIn">Login</Link></div>)
                 }

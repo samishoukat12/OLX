@@ -1,51 +1,12 @@
 import { useState, useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
-import { FetchAdsAction } from "../Redux/Actions/Actions"
+import { FetchAdsAction } from "../Redux/Actions/FetchAdsAction"
 export function CustomHooks() {
-   // const [Name, setName] = useState("")
-   // const [Email, setEmail] = useState("")
-   // const [Title, setTitle] = useState("")
-   // const [Price, setPrice] = useState("")
-   // const [Type, setType] = useState("")
-   // const [City, setCity] = useState("")
-   // const [State, setState] = useState("")
-   // const [PhoneNumber, setPhoneNumber] = useState("")
-   // const [Address, setAddress] = useState("")
-   // const [Description, setDescription] = useState("")
-   // const [Image, setImage] = useState("")
-
-
-   // const[AdsTime,setTime]=useState(new Date())
    const dispatch = useDispatch()
-   const [Loading, setLoading] = useState(false)
-   const CardsAds = useSelector(store => store.FetchReducer.CardsAds)
-   console.log(CardsAds);
-   useEffect(() => {
-      dispatch(FetchAdsAction(setLoading))
-   }, [])
+   const [visible, setVisible] = useState(16);
 
-   return [CardsAds, Loading,
-      // Name,
-      // Email,
-      // Title,
-      // Price,
-      // Type,
-      // City,
-      // State,
-      // PhoneNumber,
-      // Address,
-      // Description,
-      // Image,
-      // setName,
-      // setType,
-      // setEmail,
-      // setPrice,
-      // setState,
-      // setCity,
-      // setAddress,
-      // setDescription,
-      // setImage,
-      // setPhoneNumber,
-      // setTitle,
-   ]
+    const loadMore = () =>{
+        setVisible(preValue=> preValue+10);
+    }
+    return[visible,loadMore]
 }

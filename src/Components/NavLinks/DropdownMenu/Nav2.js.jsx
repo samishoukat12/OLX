@@ -1,6 +1,6 @@
 import {Nav,Container,Navbar,NavDropdown } from "react-bootstrap"
 import "./Nav2.css"
-import {Link} from "react-router-dom"
+import {Link,NavLink} from "react-router-dom"
 import { Grid } from "@material-ui/core"
 export default function DropDownButton() {
  return(
@@ -26,13 +26,13 @@ export default function DropDownButton() {
           <NavDropdown.Divider />
           <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
         </NavDropdown>
-        <Nav.Link ><Link to="/MobilePhones" className="LinkColor">Mobile Phones</Link></Nav.Link>
-        <Nav.Link ><Link to="/Cars" className="LinkColor" >Cars</Link></Nav.Link>
-        <Nav.Link ><Link to="/MotorCycles" className="LinkColor">Motorcycles</Link></Nav.Link>
-        <Nav.Link ><Link to="/Houses" className="LinkColor">Houses</Link></Nav.Link>
-        <Nav.Link ><Link to="/TVVideoAudio" className="LinkColor">TV-video-Audio</Link></Nav.Link>
-        <Nav.Link ><Link to="/Tables" className="LinkColor">Tables</Link></Nav.Link>
-        <Nav.Link ><Link to="/LandAndPlots" className="LinkColor">Land & Plots</Link></Nav.Link>
+        <NavLink activeStyle={{color:"#21A49f"}} style={{color:"#393f34"}} to="/MobilePhones" className="LinkColor">Mobile Phones</NavLink>
+        <NavLink activeStyle={{color:"#21A49f"}} style={{color:"#393f34"}} to="/Cars" className="LinkColor" >Cars</NavLink>
+        <NavLink activeStyle={{color:"#21A49f"}} style={{color:"#393f34"}} to="/MotorCycles" className="LinkColor">Motorcycles</NavLink>
+        <NavLink activeStyle={{color:"#21A49f"}} style={{color:"#393f34"}} to="/Houses" className="LinkColor">Houses</NavLink>
+        <NavLink activeStyle={{color:"#21A49f"}} style={{color:"#393f34"}}  to="/TVVideoAudio" className="LinkColor">TV-video-Audio</NavLink>
+        <NavLink activeStyle={{color:"#21A49f"}} style={{color:"#393f34"}} to="/Tables" className="LinkColor">Tables</NavLink>
+        <NavLink activeStyle={{color:"#21A49f"}} style={{color:"#393f34"}} to="/LandAndPlots" className="LinkColor">Land & Plots</NavLink>
 
       </Nav>
     </Navbar.Collapse>

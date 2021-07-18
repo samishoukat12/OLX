@@ -19,8 +19,10 @@ import PrivateRouting from "./PrivateRouting";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react"
 import { alreadyLoginUser } from "../Redux/Actions/Actions";
-import Profile from "../Modules/Profile/Profile"
-
+import SellingForm from "../Modules/Profile/SellingForm"
+import NotFound from "./NotFoung"
+import SellingAds from "../Modules/Profile/SellingAds/SellingAds";
+ 
 
 
 export default function Routing() {
@@ -50,17 +52,24 @@ export default function Routing() {
                 <Route path="/TVVideoAudio" component={TVVideoAudio} />
                 <Route path="/login"><LoginPage /></Route>
                 <Route path="/SignUp"><SignUp /></Route>
+                <Route path="/SellingForm"><SellingForm /></Route>
+                <Route path="/SellingAds"><SellingAds/></Route>
+               
 
-                {
-                    authState ? (<Profile />) : (<LoginPage />)
+
+             {
+                    authState ? (<SellingForm />) : (<LoginPage />)
                 }
 
                 <PublicRouting path="/login" auth={authState}>
                     <LoginPage />
+                    
                 </PublicRouting>
                 <PrivateRouting path="/profile" auth={authState}>
-                    <Profile />
-                </PrivateRouting>
+                    <SellingForm />
+                </PrivateRouting> 
+               
+                 <Route component={NotFound}/>
             </Switch>
         </Router>
     )

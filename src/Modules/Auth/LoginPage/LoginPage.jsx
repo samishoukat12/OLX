@@ -17,11 +17,11 @@ export default function LoginPage() {
   let history = useHistory();
   const GoogleLogin=()=>{
     dispatch(LoginWithGoogle(setLoading))
-    history.push("/profile");
+    history.push("/SellingAds");
   }
   const FacebookLogin=()=>{
-    dispatch(LoginWithFacebook())
-    history.push("/profile");
+    dispatch(LoginWithFacebook(setLoading))
+    history.push("/SellingAds");
   }
   return (
     <>

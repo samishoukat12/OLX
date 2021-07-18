@@ -12,7 +12,7 @@ export function UseLogin() {
     const dispatch = useDispatch()
     const doLoginUser = () => {
         dispatch(doLogin(email, password))
-        history.push("/profile");
+        history.push("/SellingAds");
         setEmail("")
         setPassword("")
     }

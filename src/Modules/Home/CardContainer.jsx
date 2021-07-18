@@ -8,10 +8,13 @@ import Button from "@material-ui/core/Button"
 // import AddItemModal from "../Profile/AddItemModal/AddItemModal"
 import React, { useState } from "react";
 import Heart from "react-animated-heart";
+import { UseMyAds } from "./UseMyAds"
 
 export default function CardContainer() {
   const [isClick, setClick] = useState(false);
-  const [CardsAds, Loading] = CustomHooks()
+  const[CardsAds,Loading]=UseMyAds()
+  const[visible,loadMore]=CustomHooks()
+
 const HeartButton=()=>{
  
     setClick(!isClick)
@@ -27,7 +30,7 @@ const HeartButton=()=>{
         }
 
         {
-          CardsAds.map((item) => {
+          CardsAds.slice(0,visible).map((item) => {
             return (
               <>
               
@@ -41,7 +44,7 @@ const HeartButton=()=>{
 
                     <div>
                       <div className="img-section">
-                        <Card.Img variant="top" className=" card-img " src={item.AdsImg} />
+                        <Card.Img variant="top" className=" card-img " src={item.image} />
                         {/* {Loading  (<Skeleton width="100%" height="50%" />) :( )} */}
                         {/* {item ? (
                           <Card.Img className=" card-img " src={item.AdsImg} />
@@ -64,7 +67,7 @@ const HeartButton=()=>{
                     </div>
                     <Card.Body style={{ backgroundColor: "#EBEEEF" }}>
                       <Card.Title>RS:{item.Price}</Card.Title>
-                      <Card.Text>{item.Title}</Card.Text>
+                      <Card.Text>{item.Description}</Card.Text>
                     </Card.Body>
 
                     <Card.Footer style={{ backgroundColor: "#EBEEEF" }}>
